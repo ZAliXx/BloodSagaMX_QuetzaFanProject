@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gato</title>
+
+    <link rel="stylesheet" href="../css/gato.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>Juego del Gato</h1>
+
+    <h2 id="turno">
+        Turno
+    </h2>
+
+    <div class="tablero">
+
+        <div class="casilla" data-index="0"></div>
+        <div class="casilla" data-index="1"></div>
+        <div class="casilla" data-index="2"></div>
+
+        <div class="casilla" data-index="3"></div>
+        <div class="casilla" data-index="4"></div>
+        <div class="casilla" data-index="5"></div>
+
+        <div class="casilla" data-index="6"></div>
+        <div class="casilla" data-index="7"></div>
+        <div class="casilla" data-index="8"></div>
+
+    </div>
+
+</div>
+
+<!-- Modal Ganador -->
+
+<div id="modalGanador" class="modal oculto">
+
+    <div class="ventana">
+
+        <h2>¡Tenemos un ganador!</h2>
+
+        <img id="imagenGanadora">
+
+        <div class="botonesModal">
+
+            <button id="jugarOtra">
+                Jugar otra vez
+            </button>
+
+            <button onclick="location.href='../index.html'">
+                Menú Principal
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Modal Empate -->
+
+<div id="modalEmpate" class="modal oculto">
+
+    <div class="ventana">
+
+        <h2>¡Empate!</h2>
+
+        <p>Nadie ganó esta partida.</p>
+
+        <div class="botonesModal">
+
+            <button id="jugarOtraEmpate">
+                Jugar otra vez
+            </button>
+
+            <button onclick="location.href='../index.html'">
+                Menú Principal
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/gato.js"></script>
+
+</body>
+</html>
