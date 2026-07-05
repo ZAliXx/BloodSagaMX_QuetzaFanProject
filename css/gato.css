@@ -1,7 +1,17 @@
+:root{
+  --blood:#7c1c1f;
+  --blood-bright:#c9302c;
+  --blood-dark:#4a0f12;
+  --ember:#ff6a3d;
+  --ink:#1a0d0d;
+  --gray:#6b6b6b;
+}
+
 body{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fafafa;
+    font-family:'Georgia','Times New Roman',serif;
+    background:#ffffff;
+    color:var(--ink);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -22,8 +32,8 @@ body{
 .casilla{
     width:100px;
     height:100px;
-    background:white;
-    border:4px solid #e78bb7;
+    background:#ffffff;
+    border:4px solid var(--blood-bright);
     border-radius:20px;
     display:flex;
     justify-content:center;
@@ -33,23 +43,29 @@ body{
 }
 
 .casilla:hover{
-    background:#ffe8f4;
+    background:#fbe9e9;
+    border-color:var(--blood-dark);
     transform:scale(1.03);
 }
 
 button{
     padding:15px 30px;
-    border:none;
+    border:1px solid var(--blood-dark);
     border-radius:40px;
-    background:#e78bb7;
-    color:white;
+    background:linear-gradient(135deg, var(--blood), var(--blood-bright));
+    color:#ffffff;
+    font-family:inherit;
+    font-weight:700;
+    letter-spacing:1px;
     font-size:18px;
     cursor:pointer;
     transition:.25s;
 }
 
 button:hover{
-    background:#d467a0;
+    background:linear-gradient(135deg, var(--blood-bright), var(--ember));
+    box-shadow:0 6px 20px rgba(201,48,44,0.35);
+    transform:translateY(-1px);
 }
 
 .ficha{
@@ -88,7 +104,7 @@ button:hover{
     position:fixed;
     inset:0;
 
-    background:rgba(0,0,0,.55);
+    background:rgba(20,5,5,.6);
 
     display:flex;
     justify-content:center;
@@ -106,7 +122,8 @@ button:hover{
 
 .ventana{
 
-    background:white;
+    background:#ffffff;
+    border:2px solid var(--blood-bright);
 
     width:90%;
     max-width:350px;
@@ -117,7 +134,7 @@ button:hover{
 
     text-align:center;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    box-shadow:0 15px 35px rgba(124,28,31,.25);
 
 }
 

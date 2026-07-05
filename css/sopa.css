@@ -106,6 +106,29 @@ body{
   cursor:pointer;
 }
 
+/* Base para todos los botones del juego, por si se agrega alguno nuevo */
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
+
+#pause{
+  padding:9px 20px;
+  border:1px solid var(--gold);
+  border-radius:8px;
+  background:linear-gradient(135deg, rgba(232,185,106,0.18), rgba(232,185,106,0.08));
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:1px;
+  transition:transform 0.15s, box-shadow 0.2s, background 0.15s;
+}
+
+#pause:hover{
+  background:linear-gradient(135deg, rgba(232,185,106,0.3), rgba(232,185,106,0.14));
+  transform:translateY(-1px);
+  box-shadow:0 6px 18px rgba(232,185,106,0.25);
+}
+
 #reset{
   padding:9px 20px;
   border:1px solid var(--blood-bright);
