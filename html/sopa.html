@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sopa de Letras</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sopa de Letras · Blood Saga</title>
+<link rel="stylesheet" href="../css/sopa.css">
 </head>
 <body>
-    
+
+<div class="bg-glow"></div>
+
+<div class="container">
+  <header class="header">
+    <h1>SOPA <span>DE</span> LETRAS</h1>
+    <p class="subtitle">BLOOD SAGA EDITION</p>
+  </header>
+
+  <div class="controls">
+    <label for="difficulty">Dificultad</label>
+    <select id="difficulty" aria-label="Dificultad">
+      <option value="easy">Fácil</option>
+      <option value="medium" selected>Media</option>
+      <option value="hard">Difícil</option>
+    </select>
+    <button id="pause">⏸ Pausa</button>
+    <button id="reset">Nuevo juego</button>
+    <div id="timer" class="timer">00:00</div>
+  </div>
+
+  <div class="board">
+    <div class="panel grid-panel">
+      <div id="grid"></div>
+    </div>
+
+    <div class="panel side-panel">
+      <h2>Palabras</h2>
+      <ul id="wordlist"></ul>
+      <div id="status">Encontradas: 0 / 0</div>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay reutilizable para Pausa y Victoria -->
+<div id="overlay" class="overlay hidden">
+  <div class="overlay-box">
+    <h2 id="overlay-title">Pausa</h2>
+    <p id="overlay-message"></p>
+    <div class="overlay-actions">
+      <button id="overlay-resume">Reanudar</button>
+      <button id="overlay-replay">Volver a jugar</button>
+      <button id="overlay-home">Ir al inicio</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/sopa.js"></script>
 </body>
 </html>
