@@ -1,15 +1,11 @@
-// ---------- CONFIGURACIÓN GENERAL ----------
-// Cambia esta URL por la página de inicio real de tu proyecto
 const HOME_URL = "../Welcome.html";
 
-// ---------- BANCO DE PALABRAS (temática vampiro / Blood Saga) ----------
 const WORD_POOL = [
   "SANGRE", "VAMPIRO", "COLMILLO", "OSCURIDAD", "MEDIANOCHE","SOMBRA", "ETERNO", "CASTILLO", "NOCTURNO", "LUNA",
   "SAGA", "GIRA", "ATARDECER", "MISTERIO", "LEYENDA","FORESHADOW", "FATE", "KNIFE","XO", "DAYDREAM","OUTSIDE",
   "MOONSTRUCK","HELIUM", "LOOSE", "ROYALTY", "SACRIFICE", "TEETH", "CHACONNE","LUCIFER", "BILLS", "BLOSSOM", "SCREAM"
 ];
 
-// ---------- PRESETS DE DIFICULTAD ----------
 const DIFFICULTY = {
   easy:   { size: 10, wordCount: 6,  directions: "straight" },
   medium: { size: 14, wordCount: 9,  directions: "all" },
@@ -25,7 +21,6 @@ const STRAIGHT_DIRECTIONS = [
   [0,1], [1,0], [0,-1], [-1,0]
 ];
 
-// ---------- ESTADO ----------
 let SIZE = 14;
 let grid = [];
 let placedWords = [];

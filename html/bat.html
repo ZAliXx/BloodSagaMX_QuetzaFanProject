@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Saga México · Editor de Personajes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/bat.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="app-header">
+    <h1>BLOOD <span>SAGA</span> MÉXICO</h1>
+    <p class="subtitle">Personaliza a tu personaje y crea tu polaroid</p>
+  </header>
+
+  <!-- PASO 1: Selección de personaje -->
+  <section class="panel">
+    <h2>1. Elige tu personaje</h2>
+    <div id="character-list" class="thumb-row"></div>
+    <label class="upload-label">
+      O sube tu propia imagen
+      <input type="file" id="character-upload" accept="image/*" hidden>
+    </label>
+  </section>
+
+  <!-- Escenario de edición -->
+  <section class="panel stage-panel">
+    <h2>2. Agrega accesorios</h2>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-category="lentes">🕶️ Lentes</button>
+      <button class="tab-btn" data-category="monos">🎀 Moños</button>
+      <button class="tab-btn" data-category="flores">🌸 Flores</button>
+    </div>
+
+    <div id="accessory-list" class="thumb-row"></div>
+    <label class="upload-label small">
+      Subir accesorio personalizado para esta categoría
+      <input type="file" id="accessory-upload" accept="image/*" hidden>
+    </label>
+
+    <div class="stage-wrapper">
+      <div id="stage" class="stage">
+        <img id="base-image" src="" alt="" draggable="false">
+      </div>
+    </div>
+
+    <p class="hint">Toca un accesorio para agregarlo. Arrástralo para moverlo, usa la esquina para cambiar su tamaño y el punto superior para girarlo. El botón ✕ lo elimina.</p>
+  </section>
+
+  <!-- PASO 3: Polaroid -->
+  <section class="panel">
+    <h2>3. Elige el color del marco</h2>
+    <div class="frame-controls">
+      <input type="color" id="frame-color" value="#7c1c1f">
+      <div class="preset-colors">
+        <button class="preset" data-color="#7c1c1f" style="background:#7c1c1f"></button>
+        <button class="preset" data-color="#0a0708" style="background:#0a0708"></button>
+        <button class="preset" data-color="#e8b96a" style="background:#e8b96a"></button>
+        <button class="preset" data-color="#ffffff" style="background:#ffffff"></button>
+        <button class="preset" data-color="#3a0f12" style="background:#3a0f12"></button>
+      </div>
+    </div>
+
+    <button id="generate-btn" class="cta-btn">Generar Polaroid</button>
+  </section>
+
+</div>
+
+<!-- Overlay de resultado -->
+<div id="result-overlay" class="overlay hidden">
+  <div class="overlay-box">
+    <h2>Tu Polaroid está lista</h2>
+    <canvas id="polaroid-canvas"></canvas>
+    <div class="overlay-actions">
+      <button id="download-btn">Descargar imagen</button>
+      <button id="close-overlay-btn">Seguir editando</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/bat.js"></script>
+</body>
+</html>
