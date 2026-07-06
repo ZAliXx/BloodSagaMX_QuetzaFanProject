@@ -1,4 +1,4 @@
-const HOME_URL = "../Welcome.html";
+const HOME_URL = "../index.html";
 
 const WORD_POOL = [
   "SANGRE", "VAMPIRO", "COLMILLO", "OSCURIDAD", "MEDIANOCHE","SOMBRA", "ETERNO", "CASTILLO", "NOCTURNO", "LUNA",
