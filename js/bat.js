@@ -11,16 +11,40 @@ const CHARACTERS = [
 
 const ACCESSORY_CATEGORIES = {
   lentes: [
-    { name: "Lentes 1", src: "assets/accesorios/lentes/lentes1.png" },
-    { name: "Lentes 2", src: "assets/accesorios/lentes/lentes2.png" },
+    { name: "Lentes 1", src: "../assets/img/bat/accesorios/l1.png" },
+    { name: "Lentes 2", src: "../assets/img/bat/accesorios/l2.png" },
+    { name: "Lentes 3", src: "../assets/img/bat/accesorios/l3.png"},
+    { name: "Lentes 4", src: "../assets/img/bat/accesorios/l4.png"},
   ],
-  monos: [
-    { name: "Moño 1", src: "assets/accesorios/monos/mono1.png" },
-    { name: "Moño 2", src: "assets/accesorios/monos/mono2.png" },
+  stars: [
+    { name: "Moño 1", src: "../assets/img/bat/accesorios/h.png" },
+    { name: "Moño 2", src: "../assets/img/bat/accesorios/k.png" },
+    { name: "Moño 2", src: "../assets/img/bat/accesorios/m.png" },
+    { name: "Moño 2", src: "../assets/img/bat/accesorios/o.png" },
+    { name: "Moño 2", src: "../assets/img/bat/accesorios/q.png" },
+
   ],
-  flores: [
-    { name: "Flor 1", src: "assets/accesorios/flores/flor1.png" },
-    { name: "Flor 2", src: "assets/accesorios/flores/flor2.png" },
+  cute: [
+    { name: "cake", src: "../assets/img/bat/accesorios/a.png" },
+    { name: "gato", src: "../assets/img/bat/accesorios/b.png" },
+    { name: "mostacho", src: "../assets/img/bat/accesorios/d.png" },
+    { name: "moño", src: "../assets/img/bat/accesorios/e.png" },
+    { name: "mad", src: "../assets/img/bat/accesorios/f.png" },
+    { name: "Flor 2", src: "../assets/img/bat/accesorios/k.png" },
+    { name: "berry", src: "../assets/img/bat/accesorios/g.png" },
+    { name: "kiss", src: "../assets/img/bat/accesorios/i.png" },
+    { name: "shy", src: "../assets/img/bat/accesorios/j.png" },
+    { name: "cutie", src: "../assets/img/bat/accesorios/l.png" },
+    { name: "fishie", src: "../assets/img/bat/accesorios/r.png" },
+  ],
+  heart: [
+    { name: "heart1", src: "../assets/img/bat/accesorios/c.png" },
+    { name: "heart2", src: "../assets/img/bat/accesorios/n.png" },
+    { name: "heart3", src: "../assets/img/bat/accesorios/p.png" },
+  ],
+  stickers: [
+    { name: "1", src: "../assets/img/bat/accesorios/s.png" },
+    { name: "2", src: "../assets/img/bat/accesorios/t.png" },
   ],
 };
 
