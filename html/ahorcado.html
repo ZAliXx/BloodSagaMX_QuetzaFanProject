@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ahorcado</title>
+
+    <link rel="stylesheet" href="../css/ahorcado.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>Ahorcado</h1>
+
+    <p id="categoria"></p>
+
+    <div class="dibujo-wrap">
+        <svg id="dibujo" viewBox="0 0 220 200" width="220" height="200">
+
+            <!-- Base y poste -->
+            <line x1="20" y1="190" x2="200" y2="190" stroke="#e78bb7" stroke-width="4" stroke-linecap="round"/>
+            <line x1="60"  y1="190" x2="60"  y2="20"  stroke="#e78bb7" stroke-width="4" stroke-linecap="round"/>
+            <line x1="60"  y1="20"  x2="130" y2="20"  stroke="#e78bb7" stroke-width="4" stroke-linecap="round"/>
+            <line x1="130" y1="20"  x2="130" y2="45"  stroke="#e78bb7" stroke-width="4" stroke-linecap="round"/>
+
+            <circle id="p1" cx="130" cy="62" r="17" fill="#fff0f7" stroke="#e78bb7" stroke-width="2.5" class="parte oculto"/>
+
+            <g id="p2" class="parte oculto">
+                <circle cx="124" cy="61" r="2.2" fill="#c76ca0"/>
+                <circle cx="136" cy="61" r="2.2" fill="#c76ca0"/>
+                <circle cx="122" cy="63" r="3" fill="#ffb3d1" opacity="0.55"/>
+                <circle cx="138" cy="63" r="3" fill="#ffb3d1" opacity="0.55"/>
+                <path d="M125 67 Q130 71 135 67" stroke="#c76ca0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </g>
+
+            <line id="p3" x1="130" y1="79" x2="130" y2="125" stroke="#e78bb7" stroke-width="3" stroke-linecap="round" class="parte oculto"/>
+
+            <line id="p4" x1="130" y1="92" x2="108" y2="112" stroke="#e78bb7" stroke-width="3" stroke-linecap="round" class="parte oculto"/>
+
+            <line id="p5" x1="130" y1="92" x2="152" y2="112" stroke="#e78bb7" stroke-width="3" stroke-linecap="round" class="parte oculto"/>
+
+            <line id="p6" x1="130" y1="125" x2="110" y2="155" stroke="#e78bb7" stroke-width="3" stroke-linecap="round" class="parte oculto"/>
+
+            <line id="p7" x1="130" y1="125" x2="150" y2="155" stroke="#e78bb7" stroke-width="3" stroke-linecap="round" class="parte oculto"/>
+
+            <path d="M118 45 Q130 52 142 45 Q130 55 118 45Z" fill="#f7a4cb" opacity="0.6"/>
+            <circle cx="130" cy="47" r="2" fill="#d65f99"/>
+
+        </svg>
+    </div>
+
+    <!-- VIDAS -->
+    <div class="vidas">
+        <span id="corazon1">♥</span>
+        <span id="corazon2">♥</span>
+        <span id="corazon3">♥</span>
+        <span id="corazon4">♥</span>
+        <span id="corazon5">♥</span>
+        <span id="corazon6">♥</span>
+        <span id="corazon7">♥</span>
+    </div>
+
+    <!-- PALABRA -->
+    <div id="palabra" class="palabra"></div>
+
+    <!-- LETRAS USADAS -->
+    <p id="letrasUsadas" class="letras-usadas"></p>
+
+    <!-- TECLADO -->
+    <div id="teclado" class="teclado"></div>
+
+</div>
+
+
+<!-- MODAL VICTORIA -->
+<div id="modalVictoria" class="modal oculto">
+    <div class="ventana">
+        <h2>¡Ganaste!</h2>
+        <p>La palabra era:</p>
+        <p id="palabraFinalV" class="palabra-final"></p>
+        <div class="botonesModal">
+            <button id="btnOtraVictoria">Jugar otra vez</button>
+            <button onclick="location.href='../index.html'">Menú Principal</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DERROTA -->
+<div id="modalDerrota" class="modal oculto">
+    <div class="ventana">
+        <h2>¡Oh no!</h2>
+        <p>La palabra era:</p>
+        <p id="palabraFinalD" class="palabra-final"></p>
+        <div class="botonesModal">
+            <button id="btnOtraDerrota">Intentarlo de nuevo</button>
+            <button onclick="location.href='../index.html'">Menú Principal</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/ahorcado.js"></script>
+
+</body>
+</html>
